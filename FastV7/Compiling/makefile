@@ -30,11 +30,11 @@ ifeq ($(OS),Windows_NT)
    WIND_DIR    = C:/Users/bjonkman/Documents/DATA/DesignCodes/simulators/InflowWind/SVNdirectory/trunk/Source
    FAST_DIR    = C:/Users/bjonkman/Documents/DATA/DesignCodes/simulators/FAST/SVNdirectory/trunk/Source
 else
-   NWTC_LIB_DIR = /Users/agupta/Downloads/FASTV7/NWTC_Library/source
-   AERODYN_DIR  = /Users/agupta/Downloads/FASTV7/AeroDyn14/Source
-   WIND_DIR     = /Users/agupta/Downloads/FASTV7/InflowWind/Source
-   FAST_DIR     = /Users/agupta/Downloads/FASTV7/FastV7/Source
-   LP_DIR       = /Users/agupta/Downloads/FASTV7/NWTC_Library/source/NetLib/lapack/NWTC_LAPACK.f90
+   NWTC_LIB_DIR = ../../NWTC_Library/source
+   AERODYN_DIR  = ../../AeroDyn14/Source
+   WIND_DIR     = ../../InflowWind/Source
+   FAST_DIR     = ../../FastV7/Source
+   LP_DIR       = ../../NWTC_Library/source/NetLib/lapack/NWTC_LAPACK.f90
 endif
 
 
@@ -89,13 +89,10 @@ endif
    # Source files (by module)
 
 LIB_SOURCES =           \
-	NWTC_Base.f90	       \
- 	NWTC_Library_Types.f90 \
 	NWTC_IO.f90            \
 	$(PREC).f90            \
 	$(SYS_FILE).f90        \
 	NWTC_Num.f90           \
-	ModMesh_Types.f90      \
 	ModMesh.f90            \
 	NWTC_Aero.f90          \
 	NWTC_Library.f90
